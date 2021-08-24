@@ -5,8 +5,7 @@ type FormPropType = {
   getWeather: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const Form = (props: FormPropType) => {
-  const { setCity, getWeather } = props;
+const Form = ({ setCity, getWeather }: FormPropType) => {
   return (
     <form onSubmit={getWeather}>
       <input type="text" name="city" placeholder="都市名" onChange={ e => setCity(e.target.value)}/>
